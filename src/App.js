@@ -1,5 +1,5 @@
 import {MainPage} from "./pages/MainPage/MainPage";
-import React, {useState} from "react";
+import React from "react";
 import {GlobalStyles} from "./Styles/GlobalStyles";
 import {BrowserRouter, Route, Routes,Navigate} from "react-router-dom";
 import {LoginPage} from "./pages/LoginPage/LoginPage";
@@ -8,8 +8,8 @@ import {MainLayout} from "./Layouts/MainLayout/MainLayout";
 import {useAuthContext} from "./hooks/useAuthContext";
 import {ProfilePage} from "./pages/ProfilePage/ProfilePage";
 import {ScoresPage} from "./pages/ScoresPage/ScoresPage";
-
-
+import {ThemeProvider} from "styled-components";
+import {theme} from "./theme/theme";
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 
     return (
         <BrowserRouter>
-
+            <ThemeProvider theme={theme}>
             <GlobalStyles/>
             <MainLayout>
             <Routes>
@@ -29,6 +29,7 @@ function App() {
                 <Route path={'/scores'} element={user ? <ScoresPage/> : <Navigate to={'/'}/>}/>
             </Routes>
             </MainLayout>
+            </ThemeProvider>
         </BrowserRouter>
 
     )

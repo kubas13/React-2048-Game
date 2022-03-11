@@ -3,7 +3,7 @@ import {Link, NavLink} from "react-router-dom";
 
 export const StyledWrapper = styled.div`
   width: 100%;
-  border-bottom: 1px solid #E8485580;
+  border-bottom: 1px solid ${ p=> p.theme.colors.burgundy};
   position: relative;
 
 
@@ -30,8 +30,8 @@ export const StyledMenuContainer = styled.div`
 
 export const StyledSiteTitle = styled(Link)`
   text-decoration: none;
-  color: black;
-  font-size: 40px;
+  color: ${ p=> p.theme.colors.black};
+  font-size: ${ p=> p.theme.fontSizes.L};
   font-weight: bold;
 `;
 
@@ -40,22 +40,22 @@ export const StyledMenuLink = styled(NavLink)`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: black;
+  color: ${ p=> p.theme.colors.black};
   font-weight: bold;
-  font-size: 22px;
+  font-size: ${ p=> p.theme.fontSizes.S};
   padding: 10px 16px;
   border-radius: 8px;
   transition: 0.6s;
 
 
   &.active {
-    background-color: #E84855;
-    color: white;
+    background-color: ${p=> p.theme.colors.pink};
+    color: ${p=> p.theme.colors.white};
   }
 
   :hover {
-    background-color: #E8485580;
-    color: white;
+    background-color: ${ p=> p.theme.colors.burgundy};
+    color: ${ p=> p.theme.colors.white};
   }
 
   @media (max-width: 800px) {
@@ -72,7 +72,7 @@ export const StyledLinkContainer = styled.div`
     width: 100%;
     display: ${({toggleMenu}) => toggleMenu ? 'none' : ''};
     left: 0;
-    background-color: #fafafa;
+    background-color: ${ p=> p.theme.colors.white};
     top: 100%;
     position: absolute;
     z-index: 10;
@@ -92,10 +92,10 @@ export const StyledLogoutButton = styled.button`
   background-color: transparent;
   justify-content: center;
   text-decoration: none;
-  color: black;
-  border: 1px solid #E84855;
-  font-weight: bold;
-  font-size: 22px;
+  color: ${ p=> p.theme.colors.black};
+  border: 1px solid ${ p=> p.theme.colors.pink};
+  font-weight: ${ p=> p.theme.fontWeight.bold};
+  font-size: ${ p=> p.theme.fontSizes.S};
   padding: 10px 16px;
   border-radius: 8px;
   transition: 0.6s;

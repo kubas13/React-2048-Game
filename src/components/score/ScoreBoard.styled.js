@@ -6,11 +6,10 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledScoreValue = styled.p`
-  font-size: 24px;
-  font-weight: 500;
+  font-size: ${props => props.theme.fontSizes.S};
+  font-weight: ${props => props.theme.fontWeight.medium};
   padding: 5px 10px;
   border-radius: 10px;
-  color: white;
-
-  background-color: #d33f49;
+  color: ${props => props.theme.colors.white};
+  background-color: ${props => props.theme.colors.pink};
 `;

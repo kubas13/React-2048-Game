@@ -9,6 +9,10 @@ import {
 import {useLogout} from "../../hooks/useLogout";
 import {useAuthContext} from "../../hooks/useAuthContext";
 import {useState} from "react";
+import { FaAlignJustify, FaWindowClose } from 'react-icons/fa';
+
+
+
 export const Navbar = () => {
     const [toggleMenu,setToggleMenu]= useState(true)
     const {user} = useAuthContext()
@@ -35,7 +39,7 @@ export const Navbar = () => {
 
         </StyledMenuContainer>
         <StyledToggleButton onClick={()=>setToggleMenu(!toggleMenu)}>
-            {toggleMenu ? 'show' : 'hide'}
+            {toggleMenu ? <FaAlignJustify size='2em' /> : <FaWindowClose size='2em'/>}
         </StyledToggleButton>
     </StyledWrapper>
     )

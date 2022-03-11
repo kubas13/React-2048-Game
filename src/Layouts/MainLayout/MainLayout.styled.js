@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledWrapper = styled.div`
   width: 100%;
   min-height: 100vh;
-  background-color: #FAFAFA;
+  background-color: ${props => props.theme.colors.white};
   display: flex;
   flex-direction: column;
   gap: 50px 0;

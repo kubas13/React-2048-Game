@@ -34,7 +34,6 @@ export const useSignup = () => {
             });
 
             const userRef = await collection(db, "users");
-            console.log(userRef)
             await addDoc(userRef, {
                 displayName: name,
                 uid: res.user.uid,

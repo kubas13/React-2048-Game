@@ -18,13 +18,13 @@ export const StyledSignupForm = styled.form`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: black;
-  font-weight: 500;
+  color: ${props => props.theme.colors.black};
+  font-weight: ${props => props.theme.fontWeight.medium};
   width: 100%;
   gap: 20px;
 `;
 
 export const StyledTitle = styled.p`
-  font-size: 32px;
-  font-weight: bold;
+  font-size: ${props => props.theme.fontSizes.M};
+  font-weight: ${props => props.theme.fontWeight.bold};
 `;

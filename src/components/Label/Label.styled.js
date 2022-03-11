@@ -8,8 +8,8 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledText = styled.span`
-  font-size: 20px;
-  font-weight: 500;
-  color: black;
+  font-size: ${props => props.theme.fontSizes.S};
+  font-weight: ${props => props.theme.fontWeight.medium};
+  color: ${props => props.theme.colors.black};
   text-transform: capitalize;
 `;

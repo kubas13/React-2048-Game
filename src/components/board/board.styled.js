@@ -13,7 +13,7 @@ export const StyledGameOverModal = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #ffffffb3;
+  background-color: ${p => p.theme.colors.grey};
   left: 0;
   display: flex;
   align-items: center;
@@ -21,8 +21,8 @@ export const StyledGameOverModal = styled.div`
 `;
 
 export const StyledGameOverText = styled.p`
-  font-size: 40px;
-  font-weight: 600;
+  font-size: ${props => props.theme.fontSizes.M};
+  font-weight: ${props => props.theme.fontWeight.semiBold};
 `;
 
 export const StyledGameBoardWrapper = styled.div`

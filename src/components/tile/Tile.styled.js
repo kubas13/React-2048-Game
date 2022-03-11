@@ -9,6 +9,6 @@ export const StyledTile = styled.div`
 `;
 
 export const StyledTileValue = styled.div`
-  font-size: 40px;
-  color: white;
+  font-size: ${props => props.theme.fontSizes.L};
+  color: ${props => props.theme.colors.white};
 `;
