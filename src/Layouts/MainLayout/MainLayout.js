@@ -1,5 +1,5 @@
 import {StyledContentContainer, StyledWrapper} from "./MainLayout.styled";
-import {Navbar} from "../../components/Navbar/Navbar";
+import {Navbar} from "../../components/navbar/Navbar";
 import {useAuthContext} from "../../hooks/useAuthContext";
 
 export const MainLayout = ({children}) => {

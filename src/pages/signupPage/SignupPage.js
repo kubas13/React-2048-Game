@@ -2,9 +2,9 @@ import React, {useState} from "react";
 import {
     StyledSignupForm, StyledSignupWrapper, StyledTitle
 } from "./SignupPage.styled";
-import {FormInput} from "../../components/FormInput/FormInput";
-import {StyledButton} from "../../components/Button/Button.styled";
-import {Label} from "../../components/Label/Label";
+import {FormInput} from "../../components/formInput/FormInput";
+import {StyledButton} from "../../components/button/Button.styled";
+import {Label} from "../../components/label/Label";
 import {useSignup} from "../../hooks/useSignup";
 import {useAuthContext} from "../../hooks/useAuthContext";
 

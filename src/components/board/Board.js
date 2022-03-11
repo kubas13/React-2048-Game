@@ -7,24 +7,23 @@ import {
   move,
   getEmptyTilesIndexes,
   addRandomTile,
-} from "./board_functions";
+} from "./Board_functions";
 import {
   StyledGameOverModal,
   StyledWrapper,
   StyledGameBoardWrapper,
   StyledGameOverText,
   StyledGameBoard,
-} from "./board.styled";
-import Button from "../Button/Button";
+} from "./Board.styled";
+import Button from "../button/Button";
 import {useAuthContext} from "../../hooks/useAuthContext";
-import userEvent from "@testing-library/user-event";
 import {addDoc, collection} from "firebase/firestore";
 
 const GameOverDiv = ({ status }) => {
   return (
     <StyledGameOverModal>
       <StyledGameOverText>
-        {status === "won" ? "youHaveWonOU WON!" : "GAME OVER"}
+        {status === "won" ? "youHaveWon!" : "GAME OVER"}
       </StyledGameOverText>
     </StyledGameOverModal>
   );
@@ -59,8 +58,6 @@ export const Board = (props) => {
   }, [tiles]);
 
 
-
-
   const handleSaveScore  = async () => {
 
 
@@ -78,8 +75,8 @@ export const Board = (props) => {
 
     restartHandler()
 
-
   }
+
 
   const increaseScore = (value) => {
     setScore(score + value);
@@ -113,7 +110,6 @@ export const Board = (props) => {
         return;
     }
 
-    // Check if move changed board. If so, add new random tile.
     const nothingHappened = prevTiles.every(
       (tile, index) => tile === [].concat(...newTiles)[index]
     );

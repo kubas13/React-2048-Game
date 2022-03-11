@@ -1,13 +1,13 @@
-import {MainPage} from "./pages/MainPage/MainPage";
+import {MainPage} from "./pages/mainPage/MainPage";
 import React from "react";
-import {GlobalStyles} from "./Styles/GlobalStyles";
+import {GlobalStyles} from "./styles/GlobalStyles";
 import {BrowserRouter, Route, Routes,Navigate} from "react-router-dom";
-import {LoginPage} from "./pages/LoginPage/LoginPage";
-import {SignupPage} from "./pages/SignupPage/SignupPage";
+import {LoginPage} from "./pages/loginPage/LoginPage";
+import {SignupPage} from "./pages/signupPage/SignupPage";
 import {MainLayout} from "./Layouts/MainLayout/MainLayout";
 import {useAuthContext} from "./hooks/useAuthContext";
-import {ProfilePage} from "./pages/ProfilePage/ProfilePage";
-import {ScoresPage} from "./pages/ScoresPage/ScoresPage";
+import {ProfilePage} from "./pages/profilePage/ProfilePage";
+import {ScoresPage} from "./pages/scoresPage/ScoresPage";
 import {ThemeProvider} from "styled-components";
 import {theme} from "./theme/theme";
 

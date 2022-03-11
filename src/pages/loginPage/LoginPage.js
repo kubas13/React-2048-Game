@@ -1,8 +1,8 @@
 import {useState} from "react";
-import {FormInput} from "../../components/FormInput/FormInput";
+import {FormInput} from "../../components/formInput/FormInput";
 import {StyledLoginForm, StyledLoginWrapper, StyledTitle} from "./LoginPage.styled";
-import {StyledButton} from "../../components/Button/Button.styled";
-import {Label} from "../../components/Label/Label";
+import {StyledButton} from "../../components/button/Button.styled";
+import {Label} from "../../components/label/Label";
 import {useLogin} from '../../hooks/useLogin'
 
 export const LoginPage = () => {

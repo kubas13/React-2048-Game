@@ -2,10 +2,10 @@ import { StyledTile, StyledTileValue } from "./Tile.styled";
 
 export const Tile = ({ value }) => {
   const colors = {
-    1: "#ffff33",
-    2: "#ffad33",
-    4: "#d86400",
-    8: "#de4000",
+    1: "#F72585",
+    2: "#A0522D",
+    4: "#A52A2A",
+    8: "#800000",
   };
   const getColorFromValue = (value) => {
     if (value === 0) return "#F2E9DC";

@@ -1,7 +1,9 @@
 const initiateBoard = () => {
   const tiles = Array(4).fill(Array(4).fill(0));
   return addRandomTile(tiles, 2);
+
 };
+
 
 const zerosToBottom = (a, b) => {
   if (a !== 0 && b === 0) return 1;
@@ -10,7 +12,8 @@ const zerosToBottom = (a, b) => {
 };
 
 const transposeMatrix = (arr) =>
-  arr[0].map((_, colIndex) => arr.map((row) => row[colIndex]));
+  arr[0].map((row, colIndex) => arr.map((row) => row[colIndex]));
+
 
 const move = (tiles, direction, increaseScoreFunction) => {
   let collided = [];
@@ -49,7 +52,6 @@ const move = (tiles, direction, increaseScoreFunction) => {
     });
   }
 
-  // Transpose it back again
   if (direction === "ArrowUp" || direction === "ArrowDown") {
     tiles = transposeMatrix(tiles);
   }
@@ -78,6 +80,7 @@ const handleCollisions = (row, direction) => {
   if (direction === "ArrowRight" || direction === "ArrowDown") {
     row.reverse();
   }
+  console.log(row)
 
   return [row, score];
 };
@@ -92,7 +95,9 @@ const getEmptyTilesIndexes = (tiles) => {
   });
 
   return emptyTilesIndexes;
+
 };
+
 
 const makeRows = (flatArr) => {
   const rows = [];
@@ -104,6 +109,8 @@ const makeRows = (flatArr) => {
   return rows;
 };
 
+
+
 const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 const addRandomTile = (tiles, no = 1) => {
@@ -112,7 +119,6 @@ const addRandomTile = (tiles, no = 1) => {
     const emptyTiles = getEmptyTilesIndexes(tilesFlatArray);
     const randTileIndex = getRandom(emptyTiles);
     const randValue = getRandom([2, 4]);
-
     tilesFlatArray[randTileIndex] = randValue;
   }
 

@@ -1,5 +1,5 @@
 import {StyledProfileContent, StyledProfileText, StyledProfileTitle, StyledProfileWrapper} from "./ProfilePage.styled"
-import {StyledButton} from "../../components/Button/Button.styled";
+import {StyledButton} from "../../components/button/Button.styled";
 import {useAuthContext} from "../../hooks/useAuthContext";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
