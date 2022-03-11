@@ -2,14 +2,23 @@ import { StyledTile, StyledTileValue } from "./Tile.styled";
 
 export const Tile = ({ value }) => {
   const colors = {
-    1: "#F72585",
-    2: "#A0522D",
-    4: "#A52A2A",
-    8: "#800000",
+    2: "#FA8072",
+    4: "#E9967A",
+    8: "#FF7F50",
+    16: "#CD5C5C",
+    32: "#DC143C",
+    64: "#B22222",
+    128: "#8B0000",
+    256: "#800080",
+    512: "#000080",
+    1024: "#008080",
+    2048: "#DAA520",
+
+
   };
   const getColorFromValue = (value) => {
     if (value === 0) return "#F2E9DC";
-    return colors[Math.floor(value % 15)];
+    return colors[value];
   };
 
   return (
