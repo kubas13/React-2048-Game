@@ -80,7 +80,7 @@ const handleCollisions = (row, direction) => {
   if (direction === "ArrowRight" || direction === "ArrowDown") {
     row.reverse();
   }
-  console.log(row)
+
 
   return [row, score];
 };
