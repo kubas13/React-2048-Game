@@ -18,8 +18,6 @@ export const SignupPage = () => {
 
 
     const state = useAuthContext()
-    console.log(state)
-
     const handleSubmit = (e) => {
         e.preventDefault()
         signup(email,password,username)

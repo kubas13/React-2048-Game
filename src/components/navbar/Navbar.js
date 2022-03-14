@@ -4,7 +4,7 @@ import {
     StyledMenuContainer,
     StyledToggleButton,
     StyledMenuLink,
-    StyledLinkContainer, StyledLogoutButton
+    StyledLinkContainer, StyledLogoutButton,
 } from "./Navbar.styled";
 import {useLogout} from "../../hooks/useLogout";
 import {useAuthContext} from "../../hooks/useAuthContext";

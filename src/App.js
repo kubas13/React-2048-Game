@@ -1,5 +1,5 @@
 import {MainPage} from "./pages/mainPage/MainPage";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {GlobalStyles} from "./styles/GlobalStyles";
 import {BrowserRouter, Route, Routes,Navigate} from "react-router-dom";
 import {LoginPage} from "./pages/loginPage/LoginPage";
@@ -9,11 +9,35 @@ import {useAuthContext} from "./hooks/useAuthContext";
 import {ProfilePage} from "./pages/profilePage/ProfilePage";
 import {ScoresPage} from "./pages/scoresPage/ScoresPage";
 import {ThemeProvider} from "styled-components";
-import {theme} from "./theme/theme";
+import {themeLight, themeDark, themeDefault} from "./theme/theme";
 
 
 function App() {
 
+    const newTheme = {...themeDefault, themeLight};
+    const [theme, setTheme] = useState(themeLight);
+
+    const handleThemeToggled = () => {
+        if (theme.id === 'dark') {
+            setTheme({
+                ...themeDefault,
+                ...themeLight,
+            })
+        } else {
+            setTheme({
+                ...themeDefault,
+                ...themeDark,
+            })
+        }
+    }
+
+
+    useEffect(() => {
+        setTheme({
+            ...themeDefault,
+            ...themeLight,
+        })
+    }, [])
     const {user}= useAuthContext()
 
     return (

@@ -116,3 +116,8 @@ export const StyledToggleButton = styled.div`
 
   }
 `
+
+// export const StyledThemeButton = styled.button`
+//   background: ${p => p.theme.colors.pink};
+//   color: ${p => p.theme.colors.black};
+// `;

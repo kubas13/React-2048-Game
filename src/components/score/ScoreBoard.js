@@ -1,6 +1,5 @@
 import {
   StyledScoreValue,
-  StyledSingleScoreBox,
   StyledWrapper,
 } from "./ScoreBoard.styled";
 

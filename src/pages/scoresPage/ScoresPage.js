@@ -36,7 +36,6 @@ useEffect(()=> {
 },[documents])
 
 
-    console.log(orderScores)
 
     return(
         <StyledWrapper>
